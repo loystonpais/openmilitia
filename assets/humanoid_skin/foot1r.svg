@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="player_full.svg"
+   inkscape:export-filename="leg1l.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.30655318"
+     inkscape:cx="844.87787"
+     inkscape:cy="352.30428"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" /><defs
+     id="defs1"><linearGradient
+       id="swatch55"
+       inkscape:swatch="solid"><stop
+         style="stop-color:#151911;stop-opacity:1;"
+         offset="0"
+         id="stop55" /></linearGradient></defs><g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Draw"><path
+       style="display:inline;opacity:1;fill:#d1ad9a;fill-opacity:1;stroke:#000000;stroke-width:9;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:0;paint-order:markers stroke fill"
+       d="m 436.46363,780.60795 c -0.0498,14.47875 -5.25207,40.16576 -16.66848,53.27872 -6.63275,7.61843 -11.4498,20.13925 -8.66974,25.88485 4.76272,9.8432 44.48366,5.87377 74.40348,14.28884 43.09702,12.12121 88.58537,7.1337 91.48438,3.80462 5.86412,-6.73405 -5.1816,-14.0875 -5.1816,-14.0875 -31.82372,-7.70121 -47.35358,-11.57263 -58.74371,-24.3126 -9.35916,-10.4683 10.93726,-48.13732 7.12882,-57.07298 -2.95037,-6.92239 -84.54003,-14.41017 -84.48906,-8.50402 0.051,5.90614 0.73588,6.72007 0.73588,6.72007 z"
+       id="path1"
+       sodipodi:nodetypes="csssscssscc"
+       inkscape:label="FootR" /></g></svg>

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://y58xvi8edxd6"]
+
+[ext_resource type="Script" path="res://scenes/ui/joystick/joystick_with_color_changer.gd" id="1_8sm4x"]
+[ext_resource type="Texture2D" uid="uid://b1ltjfuxqa82n" path="res://scenes/ui/joystick/assets/colors/border.svg" id="2_e1j8f"]
+[ext_resource type="Texture2D" uid="uid://q8241leb2yu6" path="res://scenes/ui/joystick/assets/colors/stick_gray.svg" id="2_j4fui"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r2hkj"]
+resource_local_to_scene = true
+radius = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_clfo4"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="Joystick" type="Node2D" node_paths=PackedStringArray("stick", "border")]
+script = ExtResource("1_8sm4x")
+stick = NodePath("Stick")
+border = NodePath("Border")
+
+[node name="Stick" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_j4fui")
+
+[node name="Border" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_e1j8f")
+
+[node name="DetectRadius" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r2hkj")
+debug_color = Color(0.706288, 0.298737, 0.961265, 0.172549)
+
+[node name="ResetRadius" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_clfo4")
+debug_color = Color(9.14484e-07, 0.64838, 0.157421, 0.105882)

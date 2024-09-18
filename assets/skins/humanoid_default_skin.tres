@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="HumanoidCharacterSkin" load_steps=19 format=3 uid="uid://dodgd04ih1sub"]
+
+[ext_resource type="Texture2D" uid="uid://yseu40skxawj" path="res://assets/humanoid_skin/body1.svg" id="1_01wbf"]
+[ext_resource type="Texture2D" uid="uid://bb48bfm04sljx" path="res://assets/humanoid_skin/eye1l.svg" id="2_uwd0s"]
+[ext_resource type="Texture2D" uid="uid://b8q67fet3x3wb" path="res://assets/humanoid_skin/eye1r.svg" id="3_8im4t"]
+[ext_resource type="Texture2D" uid="uid://do6qflttpxw1k" path="res://assets/humanoid_skin/eyebrow1l.svg" id="4_t5vu2"]
+[ext_resource type="Texture2D" uid="uid://dckm4147wm4o3" path="res://assets/humanoid_skin/eyebrow1r.svg" id="5_v1ctd"]
+[ext_resource type="Texture2D" uid="uid://c7qydx2ogs54" path="res://assets/humanoid_skin/foot1l.svg" id="6_0qw2s"]
+[ext_resource type="Texture2D" uid="uid://dxhbe0mbplbvs" path="res://assets/humanoid_skin/foot1r.svg" id="7_5r8kb"]
+[ext_resource type="Texture2D" uid="uid://cuj8umyfk3ejd" path="res://assets/humanoid_skin/hand1l.svg" id="8_iocb0"]
+[ext_resource type="Texture2D" uid="uid://bgm3o0kj8a0h1" path="res://assets/humanoid_skin/hand1r.svg" id="9_v0gay"]
+[ext_resource type="Texture2D" uid="uid://vrxolpmj157x" path="res://assets/humanoid_skin/head1.svg" id="10_kfhpc"]
+[ext_resource type="Texture2D" uid="uid://b1pkth7fn5e7r" path="res://assets/humanoid_skin/leg1l.svg" id="11_tvybw"]
+[ext_resource type="Texture2D" uid="uid://cv4egrkna32x6" path="res://assets/humanoid_skin/leg1r.svg" id="12_j5h5l"]
+[ext_resource type="Texture2D" uid="uid://cy4y7wv8p4jqe" path="res://assets/humanoid_skin/mouth1.png" id="13_7lp5h"]
+[ext_resource type="Texture2D" uid="uid://npfkxp60bman" path="res://assets/humanoid_skin/pupil1l.svg" id="14_xb8ah"]
+[ext_resource type="Texture2D" uid="uid://dv0cwl1v0qrco" path="res://assets/humanoid_skin/pupil1r.svg" id="15_5lbgp"]
+[ext_resource type="Script" path="res://scripts/humanoid/character_skin.gd" id="16_y0eao"]
+[ext_resource type="Texture2D" uid="uid://cjxuxyj4axkv0" path="res://assets/humanoid_skin/shoes1l.svg" id="17_35lmo"]
+[ext_resource type="Texture2D" uid="uid://75fjjfcqhc33" path="res://assets/humanoid_skin/shoes1r.svg" id="18_en0be"]
+
+[resource]
+script = ExtResource("16_y0eao")
+head = ExtResource("10_kfhpc")
+eye_left = ExtResource("2_uwd0s")
+eye_right = ExtResource("3_8im4t")
+eyebrow_left = ExtResource("4_t5vu2")
+eyebrow_right = ExtResource("5_v1ctd")
+pupil_left = ExtResource("14_xb8ah")
+pupil_right = ExtResource("15_5lbgp")
+mouth = ExtResource("13_7lp5h")
+body = ExtResource("1_01wbf")
+hand_left = ExtResource("8_iocb0")
+hand_right = ExtResource("9_v0gay")
+leg_left = ExtResource("11_tvybw")
+leg_right = ExtResource("12_j5h5l")
+foot_left = ExtResource("6_0qw2s")
+foot_right = ExtResource("7_5r8kb")
+shoe_left = ExtResource("17_35lmo")
+shoe_right = ExtResource("18_en0be")

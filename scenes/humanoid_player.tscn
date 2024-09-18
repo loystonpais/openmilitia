@@ -1,0 +1,247 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn6lbpcw6dves"]
+
+[ext_resource type="Script" path="res://scripts/humanoid/player.gd" id="1_rwq1q"]
+[ext_resource type="PackedScene" uid="uid://ctgeje17axj3y" path="res://scenes/character_featured.tscn" id="2_i6qvd"]
+[ext_resource type="Script" path="res://scripts/health.gd" id="3_2aanf"]
+
+[sub_resource type="Animation" id="Animation_cvcjp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterFeatured:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterFeatured/LegAnimation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("RESET"),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PhysicsCollision:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PhysicsCollision:shape:height")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [716.0]
+}
+
+[sub_resource type="Animation" id="Animation_3osaj"]
+resource_name = "crouch"
+loop_mode = 1
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterFeatured/LegAnimation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("crouch"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterFeatured:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PhysicsCollision:shape:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [630.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PhysicsCollision:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 43)]
+}
+
+[sub_resource type="Animation" id="Animation_wvhf4"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterFeatured/LegAnimation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("walk"),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PhysicsCollision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterFeatured:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterFeatured:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PhysicsCollision:shape:height")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [716.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tvmp2"]
+_data = {
+"RESET": SubResource("Animation_cvcjp"),
+"crouch": SubResource("Animation_3osaj"),
+"walk": SubResource("Animation_wvhf4")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8to7"]
+radius = 132.03
+height = 716.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3nbg"]
+size = Vector2(644, 304)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation", "character")]
+script = ExtResource("1_rwq1q")
+animation = NodePath("Animation")
+character = NodePath("CharacterFeatured")
+
+[node name="CharacterFeatured" parent="." instance=ExtResource("2_i6qvd")]
+head_rotation = -0.512
+hand_right_rotation = 1.0
+hand_left_rotation = 0.355
+
+[node name="HandL" parent="CharacterFeatured/Paths" index="0"]
+rotation = -0.0406699
+
+[node name="FootL" parent="CharacterFeatured/Paths" index="1"]
+position = Vector2(56.1151, 317.775)
+
+[node name="LegL" parent="CharacterFeatured/Paths" index="2"]
+position = Vector2(62.0557, 202.924)
+
+[node name="FootR" parent="CharacterFeatured/Paths" index="3"]
+position = Vector2(-39.0039, 324.892)
+
+[node name="LegR" parent="CharacterFeatured/Paths" index="4"]
+position = Vector2(-43.2301, 207.968)
+
+[node name="Head" parent="CharacterFeatured/Paths" index="6"]
+rotation = -0.144783
+
+[node name="HandR" parent="CharacterFeatured/Paths" index="7"]
+rotation = -1.52793
+scale = Vector2(0.999999, 0.999999)
+
+[node name="HandR" parent="CharacterFeatured/SkeletonIK/Skeleton/Body" index="2"]
+rotation = -1.52793
+scale = Vector2(0.999999, 0.999999)
+
+[node name="HandL" parent="CharacterFeatured/SkeletonIK/Skeleton/Body" index="3"]
+rotation = -0.0406699
+
+[node name="Head" parent="CharacterFeatured/SkeletonIK/Skeleton/Body" index="4"]
+rotation = -0.144783
+
+[node name="Head" parent="CharacterFeatured/SkeletonIK/IK" index="2"]
+position = Vector2(8.392, -360)
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tvmp2")
+}
+
+[node name="PhysicsCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h8to7")
+debug_color = Color(0.860322, 0.315333, 0.467209, 0.42)
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(25, 314)
+shape = SubResource("RectangleShape2D_r3nbg")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("3_2aanf")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+
+[editable path="CharacterFeatured"]

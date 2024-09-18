@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cnwgvhe6vy44i"]
+
+[ext_resource type="PackedScene" uid="uid://bkfrreka5laqj" path="res://scenes/maps/testmap/test_map.tscn" id="1_7mwn6"]
+[ext_resource type="Script" path="res://scripts/resources/map_resource.gd" id="2_qe6le"]
+
+[resource]
+script = ExtResource("2_qe6le")
+scene = ExtResource("1_7mwn6")
+gravity = 9.8

@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://b8og085jsm5mi"]
+
+[ext_resource type="Script" path="res://scripts/simple_gun.gd" id="1_h1om8"]
+[ext_resource type="Script" path="res://scripts/resources/simple_bullet_resource.gd" id="2_2bhun"]
+[ext_resource type="Texture2D" uid="uid://cwmjaarau6ubu" path="res://assets/guns/ak48.svg" id="2_owi1m"]
+[ext_resource type="AudioStream" uid="uid://cwwajp8k4spsb" path="res://assets/audio/ak47_single_shot.ogg" id="2_xug6k"]
+[ext_resource type="Script" path="res://scripts/resources/simple_gun_resource.gd" id="3_fs8rr"]
+
+[sub_resource type="Resource" id="Resource_sh7sf"]
+script = ExtResource("2_2bhun")
+speed = 2000.0
+max_range = 10.0
+damage_points_on_hit = 10.0
+
+[sub_resource type="Resource" id="Resource_ekekn"]
+script = ExtResource("3_fs8rr")
+texture = ExtResource("2_owi1m")
+bullet = SubResource("Resource_sh7sf")
+hold_position = Vector2(933.902, -158.035)
+collision_shapes = Array[Shape2D]([])
+bullet_audio = ExtResource("2_xug6k")
+accuracy = 0.197
+bullet_cooldown_time = 1.0
+name = ""
+description = ""
+
+[node name="Ak48" type="Node2D"]
+script = ExtResource("1_h1om8")
+resource = SubResource("Resource_ekekn")
+testing = null

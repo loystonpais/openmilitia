@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs3ygobhcu4xi"]
+
+[ext_resource type="Script" path="res://scenes/game/main/main.gd" id="1_jtnk0"]
+[ext_resource type="PackedScene" uid="uid://bkfrreka5laqj" path="res://scenes/maps/testmap/test_map.tscn" id="4_qudjr"]
+[ext_resource type="PackedScene" uid="uid://cn6lbpcw6dves" path="res://scenes/humanoid_player.tscn" id="5_wjq6p"]
+
+[node name="Main" type="Node" node_paths=PackedStringArray("world")]
+script = ExtResource("1_jtnk0")
+world = NodePath("World")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="TestMap" parent="." instance=ExtResource("4_qudjr")]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(407, 214)
+
+[node name="Player" parent="." instance=ExtResource("5_wjq6p")]
+position = Vector2(145, 181)
+scale = Vector2(0.2, 0.2)
+listen_to_input_actions = true
